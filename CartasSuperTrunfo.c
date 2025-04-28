@@ -7,16 +7,49 @@
 //Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //variaveis das cartas com arrays(mais organizado)
+    char cod[2][4]; // vetor de 2 strings de até 3 caracteres + \0
+    int populacao[2], nptur[2];
+    float area[2], pib[2];
+
+    // Cadastro da primeira carta
+    printf("Digite o código da primeira carta (ex: A01): ");
+    scanf("%s", cod[0]);
+    printf("Digite a populacao da primeira carta: ");
+    scanf("%d", &populacao[0]);
+    printf("Digite a area da primeira carta: ");
+    scanf("%f", &area[0]);
+    printf("Digite o PIB da primeira carta: ");
+    scanf("%f", &pib[0]);
+    printf("Digite o numero de pontos turisticos da primeira carta: ");
+    scanf("%d", &nptur[0]);
+
+    // Cadastro da segunda carta
+    printf("Digite o código da segunda carta (ex: B02): ");
+    scanf("%s", cod[1]);
+    printf("Digite a populacao da segunda carta: ");
+    scanf("%d", &populacao[1]);
+    printf("Digite a area da segunda carta: ");
+    scanf("%f", &area[1]);
+    printf("Digite o PIB da segunda carta: ");
+    scanf("%f", &pib[1]);
+    printf("Digite o numero de pontos turisticos da segunda carta: ");
+    scanf("%d", &nptur[1]);
+
+    // Exibição dos Dados das Cartas
+    printf("\n######### Dados da Primeira Carta #########\n");
+    printf("Codigo: %s\n", cod[0]);
+    printf("Populacao: %d\n", populacao[0]);
+    printf("Area: %.2f\n", area[0]);
+    printf("PIB: %.2f\n", pib[0]);
+    printf("Pontos Turisticos: %d\n", nptur[0]);
+
+    printf("\n######### Dados da Segunda Carta #########\n");
+    printf("Codigo: %s\n", cod[1]);
+    printf("Populacao: %d\n", populacao[1]);
+    printf("Area: %.2f\n", area[1]);
+    printf("PIB: %.2f\n", pib[1]);
+    printf("Pontos Turisticos: %d\n", nptur[1]);
 
     return 0;
 }
